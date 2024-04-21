@@ -4,40 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Vanilla Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <header>
-      <form class="search-form" id="search-form">
-        <input
-          type="search"
-          class="search-input"
-          id="search-input"
-          placeholder="Enter city..."
-        />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <h1>Paris</h1>
-      <div>☁5&degC</div>
-      <div>Sunday 9:06, broken clouds</div>
-      <div>Humidity: 81%, Wind: 4.63km/h</div>
-    </main>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/ChengetaiS" target="_blank"
-        >Chengetai Sibanda</a
-      >, is open-sourced on
-      <a
-        href="https://github.com/ChengetaiS/my-vanilla-weather-app"
-        target="_blank"
-        >GitHub</a
-      >
-      and hosted on
-      <a href="https://my-vanilla-weather-app24.netlify.app/" target="_blank"
-        >Netlify</a
-      >
-    </footer>
-    <script src="src/index.js"></script>
+    <div class="container">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            class="search-input"
+            id="search-input"
+            placeholder="Enter city..."
+          />
+          <input type="submit" value="Search" class="search-input-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-information">
+          <div>
+            <h1 class="city" id="city">Paris</h1>
+            <p>
+              <span id="time">Sunday 9:06,</span
+              ><span id="description"> broken clouds</span>
+              <br />
+              <span id="humidity">Humidity: <strong>81%</strong>,</span>
+              <span id="wind-speed">Wind: <strong>4.63km/h</strong></span>
+            </p>
+          </div>
+          <div class="weather-temp-container">
+            <div id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                class="weather-icon"
+              />
+            </div>
+            <div class="actual-temperature" id="actual-temperature">5</div>
+            <div class="unit" id="unit">&degC</div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/ChengetaiS" target="_blank"
+          >Chengetai Sibanda</a
+        >, is open-sourced on
+        <a
+          href="https://github.com/ChengetaiS/my-vanilla-weather-app"
+          target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://my-vanilla-weather-app24.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+      <script src="src/index.js"></script>
+    </div>
   </body>
 </html>
